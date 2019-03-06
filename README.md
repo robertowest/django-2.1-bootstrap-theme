@@ -1,6 +1,6 @@
-# django-2.1-myblog
+# django-2.1-bootstrap-theme
 
-_Blog desarrollado para realizar pruebas en Django 2.1_
+_Implementación del tema [Bootstrap Admin Theme v3](https://github.com/VinceG/Bootstrap-Admin-Theme-3) en Django 2.1 _
 
 
 ### Pre-requisitos
@@ -16,4 +16,4 @@ _En mi caso tengo el siguiente entorno:_
 
 ### Instalación
 
-_La instalación de este proyecto es muy sencilla, solo tendrás que copiar los archivos en tu directorio de trabajo_
+_Copiar los archivos en tu directorio de trabajo_
