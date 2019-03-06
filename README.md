@@ -1,6 +1,6 @@
 # django-2.1-bootstrap-theme
 
-_Implementación del tema [Bootstrap Admin Theme v3](https://github.com/VinceG/Bootstrap-Admin-Theme-3) en Django 2.1 _
+_Implementación del tema [Bootstrap Admin Theme v3](https://github.com/VinceG/Bootstrap-Admin-Theme-3) en Django 2.1_
 
 
 ### Pre-requisitos
