@@ -1,0 +1,69 @@
+{% extends 'base_login.html' %}
+
+{% load static from staticfiles %}
+
+{% block title %}Login{% endblock %}
+
+{% block message %}
+<div class="row">
+    <div class="col text-center">
+        {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            <p>Su nombre de usuario y contraseña no coinciden. Inténtelo de nuevo.</p>
+        </div>
+        {% endif %}
+
+        {% if next %}
+        <div class="alert alert-danger" role="alert">
+            {% if user.is_authenticated %}
+                <p>Su cuenta no tiene acceso a esta página. Para continuar,
+                    inicie sesión con una cuenta que tenga acceso.</p>
+            {% else %}
+                <p>Por favor inicie sesión para ver esta página.</p>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="col-md-4 col-md-offset-4">
+	<div class="login-wrapper">
+		<div class="box">
+			<div class="content-wrap">
+				<h6>Sign In</h6>
+				<div class="social">
+					<a class="face_login" href="#">
+						<span class="face_icon">
+							<img src="{% static 'images/facebook.png' %}" alt="fb">
+						</span>
+						<span class="text">Sign in with Facebook</span>
+					</a>
+					<div class="division">
+						<hr class="left">
+						<span>or</span>
+						<hr class="right">
+					</div>
+				</div>
+
+                <form method="post" action="{% url 'login' %}" class="form-signin">
+                    {% csrf_token %}
+
+                    <input name="username" class="form-control" type="text" placeholder="E-mail address" required autofocus>
+                    <input name="password" class="form-control" type="password" placeholder="Password" required>
+                    <div class="action">
+                        <button class="btn btn-primary signup" type="submit" value="login">Login</button>
+                        <input type="hidden" name="next" value="{{ next }}" />
+                    </div>
+                </form>
+            </div>
+		</div>
+
+		<div class="already">
+			<p>Don't have an account yet?</p>
+			<a href="signup.html">Sign Up</a>
+		</div>
+	</div>
+</div>
+{% endblock %}
