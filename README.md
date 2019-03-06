@@ -17,3 +17,6 @@ _En mi caso tengo el siguiente entorno:_
 ### Instalación
 
 _Copiar los archivos en tu directorio de trabajo_
+
+
+![Home Page](pantalla-01.png)
